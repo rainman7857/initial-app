@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: opacify(platform.brandBlack, 0.7),
+    backgroundColor: opacify(platform.black, 0.7),
     justifyContent: 'center',
     alignItems: 'center'
   },

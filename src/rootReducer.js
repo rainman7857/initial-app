@@ -1,11 +1,9 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
-import appFlow from './reducers/appFlowReducer'
-import user from './reducers/userReducer'
+import appFlow from './reducers/appFlowReducer';
 
 const rootReducer = combineReducers({
-  appFlow,
-  user
-})
+  appFlow
+});
 
-export default rootReducer
+export default rootReducer;

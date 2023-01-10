@@ -1,36 +1,27 @@
-import { Platform } from 'react-native'
-import platform, { opacify } from '../helpers/platform'
-import { DefaultTheme } from '@react-navigation/native'
+import { Platform } from 'react-native';
+import { DefaultTheme } from '@react-navigation/native';
+
+import platform from '../helpers/platform';
 
 export const StackStyle = {
   headerTitleAlign: 'center',
   headerTitle: '',
-  headerTintColor: platform.brandLight,
   headerBackTitleVisible: false,
-  gesturesEnabled: false,
+  gestureEnabled: false,
+  swipeEnabled: false,
   headerForceInset: Platform.OS === 'ios' ? true : undefined,
-  headerShadowVisible: false,
+  headerShadowVisible: true,
+  headerBackTitleStyle: { color: platform.black },
+  headerTintColor: platform.black,
   headerStyle: {
     backgroundColor: platform.defaultBackgroundColor
   },
   headerTitleStyle: {
-    color: platform.brandLight,
-    fontSize: 16,
-    // fontFamily: platform.fontSemiBold
+    color: platform.black,
+    fontWeight: '900'
   }
-}
+};
 
-export const TabsStyle = {
-  keyboardHidesTabBar: true,
-  showLabel: false,
-  headerShown: false,
-  tabBarStyle: {
-    paddingTop: 0,
-    backgroundColor: platform.tabBarBackgroundColor,
-    borderTopWidth: 0,
-    borderTopColor: platform.tabBarBorderColor
-  }
-}
 
 export const NavigationTheme = {
   ...DefaultTheme,
@@ -38,4 +29,4 @@ export const NavigationTheme = {
     ...DefaultTheme.colors,
     background: platform.defaultBackgroundColor
   }
-}
+};
